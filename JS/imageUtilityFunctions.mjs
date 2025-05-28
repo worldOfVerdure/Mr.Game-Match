@@ -9,7 +9,6 @@ export function randomizeImages(numOfTiles, chosenOptgroup, chosenOption) {
   for (let i = 0; i < NUM_OF_IMAGES; ++i)
     radomizedImageArray[i] = i;
 
-  //TODO: Rewrite this function to be more generic.
   function generateRandomIndices (sortArray, indexStart) {
     let tempSwapNum, randomNum;
     // Randomize array with Knuth shuffle, O(n)

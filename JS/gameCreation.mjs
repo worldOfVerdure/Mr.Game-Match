@@ -100,8 +100,7 @@ function createCards(mainElement, gameData, imageNamesArray, chosenOptgroup, cho
         cardBack.classList.add("back", "backFungi");
         break;
       default:
-        console.log("The appropriate optgroup was not chosen.");
-        alert("Try refreshing the webpage.");
+        throw new Error("The appropriate optgroup was not chosen.");
     }
     
     gridFragment.append(scene);
@@ -168,8 +167,7 @@ export function setGame(event, mainElement) {
         pElements.forEach(p => {p.classList.add("fungiColor")});
         break;
       default:
-        console.log("The appropriate optgroup was not chosen.");
-        alert("Try refreshing the webpage.");
+        throw new Error("The appropriate optgroup was not chosen.");
     }
     // Generates random order for front card images
     const imageNamesArray = randomizeImages(gameData.numOfTiles, optgroupSelection, selectOption);
